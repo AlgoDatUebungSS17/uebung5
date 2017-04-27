@@ -20,8 +20,13 @@ public class ShakerSort<T extends Comparable<T>> extends Sorter<T> {
 					needNext = true;
 				}
 			}
-
-			for (int l = inputSize() - 1 - j; l > j; l--) {
+			if(!needNext)
+			{
+				break;
+			}
+		
+			needNext =false;
+			for (int l = inputSize() - 2 - j; l > j; l--) {
 				if (less(l, l - 1)) {
 					swap(l - 1, l);
 					needNext = true;
@@ -29,9 +34,10 @@ public class ShakerSort<T extends Comparable<T>> extends Sorter<T> {
 			}
 			if(!needNext)
 			{
-				j = inputSize();
+				break;
 			}
 		}
+			
 
 	}
 }

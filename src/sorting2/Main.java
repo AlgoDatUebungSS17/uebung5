@@ -12,11 +12,11 @@ public class Main {
 
 		// Erstelle Sortieralgorithmen
 		List<Sorter<Integer>> sorters = new LinkedList<Sorter<Integer>>();
-//		sorters.add(new GnomeSorter<Integer>());
-//		sorters.add(new BubbleSort<Integer>());
-//		sorters.add(new InsertionSort<Integer>());
-//		sorters.add(new SelectionSort<Integer>());
-//		sorters.add(new ShakerSort<Integer>());
+		sorters.add(new GnomeSorter<Integer>());
+		sorters.add(new BubbleSort<Integer>());
+		sorters.add(new InsertionSort<Integer>());
+		sorters.add(new SelectionSort<Integer>());
+		sorters.add(new ShakerSort<Integer>());
 		sorters.add(new ShellsSort<Integer>());
 
 		// Lasse Algorithmen gegen verschiedene Eingaben laufen
