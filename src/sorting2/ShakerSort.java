@@ -10,22 +10,27 @@ public class ShakerSort<T extends Comparable<T>> extends Sorter<T> {
 	@Override
 	protected void sort() {
 
-		int steps = 0;
+		boolean needNext;
 
 		for (int j = 0; j < inputSize() / 2; j++) {
-			for (int i = steps; i < inputSize() - 1 - j; i++) {
+			needNext = false;
+			for (int i = j; i < inputSize() - 1 - j; i++) {
 				if (less(i + 1, i)) {
 					swap(i, i + 1);
+					needNext = true;
 				}
 			}
 
-			for (int l = inputSize() - 1 - steps; l > steps; l--) {
+			for (int l = inputSize() - 1 - j; l > j; l--) {
 				if (less(l, l - 1)) {
 					swap(l - 1, l);
+					needNext = true;
 				}
 			}
-
-			steps++;
+			if(!needNext)
+			{
+				j = inputSize();
+			}
 		}
 
 	}
