@@ -40,8 +40,10 @@ public abstract class Sorter<T extends Comparable<T>> {
 	 */
 	public final void sort(T[] array) {
 		this.array = array.clone();
+		sort();
+		System.gc();
 		swapCount = 0;
-		compareCount = 0;
+		compareCount = 0;		
 		long start = System.currentTimeMillis();
 		sort();
 		long end = System.currentTimeMillis();

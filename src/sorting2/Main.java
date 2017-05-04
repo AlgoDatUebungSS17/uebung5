@@ -18,6 +18,12 @@ public class Main {
 		sorters.add(new SelectionSort<Integer>());
 		sorters.add(new ShakerSort<Integer>());
 		sorters.add(new ShellsSort<Integer>());
+		sorters.add(new MergeSorter<Integer>());
+		sorters.add(new BetterMergeSort<Integer>());
+		sorters.add(new QuickSort<Integer>());
+		sorters.add(new QuickSortOutOfTree<Integer>());
+		sorters.add(new QuickSortRandom<Integer>());
+		
 
 		// Lasse Algorithmen gegen verschiedene Eingaben laufen
 		System.out.println("SORTIERTE EINGABE:");
