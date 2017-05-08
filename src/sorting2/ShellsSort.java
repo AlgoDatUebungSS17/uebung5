@@ -16,7 +16,10 @@ public class ShellsSort<T extends Comparable<T>> extends Sorter<T> {
 				for (int k = i; k > shell-1; k = k - shell)
 					if (less(k, k - shell)) {
 						swap(k, k - shell);
-
+					}
+					else
+					{
+						break;
 					}
 			}
 		}
